@@ -148,25 +148,6 @@ For a citable data release, attach the two final processed FITS files to a
 GitHub release or deposit them in a scientific data archive rather than adding
 them to the Git history.
 
-### Publishing on GitHub
-
-After creating an empty repository on GitHub, review the files that will be
-committed and publish from this project directory:
-
-```powershell
-git init
-git add .
-git status
-git commit -m "Initial public release"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/pleiades-gaia-project.git
-git push -u origin main
-```
-
-Replace `YOUR-USERNAME` with your GitHub username. Before publishing, also
-choose a software license; no license has been selected automatically because
-that choice determines how other people may reuse the work.
-
 ## Scientific interpretation and limitations
 
 The 176 published members missed inside the footprint were traced through the
