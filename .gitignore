@@ -1,0 +1,33 @@
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Python and Jupyter caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated and downloaded data
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Local development material
+Notebooks/archive/
+AGENTS.md
+.codex/
+
+# Temporary files
+*.tmp
+*.log
+~$*

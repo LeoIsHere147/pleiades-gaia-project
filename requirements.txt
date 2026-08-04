@@ -1,0 +1,9 @@
+astropy==8.0.1
+astroquery==0.4.11
+ipykernel==7.3.0
+matplotlib==3.11.1
+notebook>=7,<8
+numpy==2.5.1
+pandas==3.0.5
+pyvo==1.9.1
+scikit-learn==1.9.0
