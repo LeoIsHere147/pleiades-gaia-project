@@ -7,8 +7,7 @@ sequence with a Gaia colour-magnitude diagram (CMD), and compares the candidates
 with the published Gaia DR3 cluster catalogue of Hunt & Reffert (2023).
 
 The analysis covers a 3-degree radius around approximately RA = 56.75 degrees
-and Dec = 24.12 degrees. This is the adopted scope of the completed project; a
-larger search radius is an optional extension rather than a missing stage.
+and Dec = 24.12 degrees.
 
 ## Main result
 
@@ -42,11 +41,11 @@ candidate catalogue rather than a definitive membership-probability model.
 
 | Astrometric selection | Photometric validation |
 |---|---|
-| ![DBSCAN candidate diagnostics](figures/03_baseline_candidate_diagnostics.png) | ![Gaia colour-magnitude diagram](figures/04_photometrically_consistent_cmd.png) |
+| ![DBSCAN candidate diagnostics](figures/03_baseline_candidate_diagnostics.png)<br><sub>The candidates form a compact sequence in parallax–proper-motion space and concentrate toward the cluster centre on the sky, supporting the astrometric DBSCAN selection.</sub> | ![Gaia colour-magnitude diagram](figures/04_photometrically_consistent_cmd.png)<br><sub>The photometrically consistent candidates trace a narrow Gaia colour–magnitude sequence; the few border points and outliers qualify the selection as a candidate catalogue.</sub> |
 
 | Catalogue agreement | Missed-member audit |
 |---|---|
-| ![Additional candidates](figures/05_additional_candidate_diagnostics.png) | ![Missed published members](figures/05_missed_published_member_diagnostics.png) |
+| ![Additional candidates](figures/05_additional_candidate_diagnostics.png)<br><sub>Candidates absent from the published catalogue are compared with shared members in astrometry and the CMD, showing that only a small subset also follows the cluster sequence photometrically.</sub> | ![Missed published members](figures/05_missed_published_member_diagnostics.png)<br><sub>Published members missed within 3 degrees are separated into RUWE and DBSCAN omissions, illustrating the reliability–completeness trade-off rather than a query-footprint loss.</sub> |
 
 ## Analysis notebooks
 
@@ -132,10 +131,6 @@ Notebook 05 requires CDS/VizieR only when its published catalogue is not already
 cached in `data/raw/`. The remaining notebooks use local files produced by the
 earlier stages.
 
-If a newly added class or function appears undefined in an existing Jupyter
-session, restart the kernel and run all cells from the top so the updated import
-cell executes first.
-
 ### Repository data policy
 
 Downloaded and generated FITS files are excluded from Git. Their directory
@@ -194,7 +189,6 @@ pleiades-gaia-project/
 |   |-- raw/         # Unmodified Gaia and published-catalogue data
 |   `-- processed/   # Cleaned, candidate, and comparison catalogues
 |-- figures/         # Exported diagnostic and scientific plots
-|-- src/             # Reserved for reusable analysis code
 |-- requirements.txt
 `-- README.md
 ```
